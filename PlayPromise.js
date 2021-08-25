@@ -17,17 +17,17 @@ p.then(function fulfill(data){
     console.log("rabit1" + data);
 },function reject(err){
     throw err;
-    console.log("rabit2" + err)
+    console.log("rabit2" + err);
 
 }).catch(function handle(err){
-    console.log("rabit3" + err)
-var p = new Promise(function (resolve, reject){
-    console.log("inside Promise");
-    setTimeout(function () { resolve(45);}, 2000);
-
+    console.log("rabit3" + err);
+    var p = new Promise(function (resolve, reject) {
+        console.log("inside Promise");
+        setTimeout(function () { resolve(45);}, 2000);
+    });
 });
 
 
-p.then(function fulfilled(data){
+p.then(function fulfilled(data) {
     console.log("Hello Rabbit" + data);
 });
